@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Temp Gen, eMail!",
+  "version": "1.1",
+  "description": "Use random email from generator.email and random domain from file.",
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://generator.email/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file:///*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["domain.txt"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "48": "icons/icon-48.png"
+    },
+    "default_title": "Temp Gen, eMail!"
+  }
+}
