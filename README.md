@@ -1,5 +1,5 @@
 
-# Temp Gen, eMail!
+# Temp Gen, eMail! - Original source from <b>[eWmail](https://github.com/vantezzen/ewmail)</b>.
 Temp Gen, eMail! hanya sebuah tools / alat pembantu agar tidak perlu input email dan mengambil temporary email dari [Generator.Email](http://generator.email/).
 
 ## Installation
